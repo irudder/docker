@@ -1,5 +1,5 @@
-FROM centos:7
-MAINTAINER liufee job@feehi.com
+FROM irudder/centos:7.1
+MAINTAINER rudder <irudder@qq.com>
 RUN yum -y install epel-release && yum -y update
 RUN yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libjpeg libjpeg-devel libpng libpng-devel curl curl-devel freetype freetype-devel libmcrypt libmcrypt-devel cmake gcc-c++ ncurses-devel perl-Data-Dumper autoconf wget libicu libicu-devel libmcrypt libmcrypt-devel vim
 

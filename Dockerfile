@@ -1,4 +1,4 @@
-FROM irudder/centos:7.1
+FROM docker.io/centos ## 必须是最新，兼容问题
 MAINTAINER rudder <irudder@qq.com>
 RUN yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libjpeg libjpeg-devel libpng libpng-devel curl curl-devel freetype freetype-devel libmcrypt libmcrypt-devel cmake gcc-c++ ncurses-devel perl-Data-Dumper autoconf wget libicu libicu-devel libmcrypt libmcrypt-devel vim
 

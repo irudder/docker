@@ -1,6 +1,5 @@
 FROM irudder/centos:7.1
 MAINTAINER rudder <irudder@qq.com>
-RUN yum -y install epel-release && yum -y update
 RUN yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libjpeg libjpeg-devel libpng libpng-devel curl curl-devel freetype freetype-devel libmcrypt libmcrypt-devel cmake gcc-c++ ncurses-devel perl-Data-Dumper autoconf wget libicu libicu-devel libmcrypt libmcrypt-devel vim
 
 ADD /nginx-1.10.0 /downloads/nginx-1.10.0
@@ -29,7 +28,7 @@ ADD /nginx /etc/init.d/nginx
 RUN chmod +x /etc/init.d/nginx
 RUN useradd nginx
 RUN mkdir -p /tmp/nginx/client
-RUN cp /downloads/php-7.0.6/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm && chmod +x /etc/init.d/php-fpm
+RUN cp /downloads/php-7.0.17/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm && chmod +x /etc/init.d/php-fpm
 RUN cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 RUN cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
 RUN cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld && chmod +x /etc/init.d/mysqld

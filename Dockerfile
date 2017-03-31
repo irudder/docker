@@ -8,8 +8,8 @@ WORKDIR /downloads/nginx-1.10.0
 RUN ./configure --prefix=/usr/local/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/lock/nginx.lock --user=nginx --group=nginx --with-http_ssl_module --with-http_flv_module --with-http_stub_status_module --with-http_gzip_static_module --http-client-body-temp-path=/tmp/nginx/client/ --http-proxy-temp-path=/tmp/nginx/proxy/ --http-fastcgi-temp-path=/tmp/nginx/fcgi/ --with-pcre --with-http_dav_module 
 RUN make && make install
 
-ADD /php-7.0.6 /downloads/php-7.0.6
-WORKDIR /downloads/php-7.0.6
+ADD /php-7.0.17 /downloads/php-7.0.17
+WORKDIR /downloads/php-7.0.17
 RUN ./configure --prefix=/usr/local/php --with-config-file-path=/etc --enable-soap --enable-mbstring=all --enable-sockets --enable-fpm --with-gd --with-freetype-dir=/usr/include/freetype2/freetype --with-jpeg-dir=/usr/lib64 --with-zlib --with-iconv --enable-libxml --enable-xml --with-curl --with-mcrypt --with-openssl --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --enable-intl
 RUN make && make install
 
